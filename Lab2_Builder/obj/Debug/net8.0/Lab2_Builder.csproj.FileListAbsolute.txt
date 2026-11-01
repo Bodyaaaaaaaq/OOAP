@@ -1,0 +1,15 @@
+C:\Users\Admin\Desktop\Lab2_Builder\bin\Debug\net8.0\Lab2_Builder.exe
+C:\Users\Admin\Desktop\Lab2_Builder\bin\Debug\net8.0\Lab2_Builder.deps.json
+C:\Users\Admin\Desktop\Lab2_Builder\bin\Debug\net8.0\Lab2_Builder.runtimeconfig.json
+C:\Users\Admin\Desktop\Lab2_Builder\bin\Debug\net8.0\Lab2_Builder.dll
+C:\Users\Admin\Desktop\Lab2_Builder\bin\Debug\net8.0\Lab2_Builder.pdb
+C:\Users\Admin\Desktop\Lab2_Builder\obj\Debug\net8.0\Lab2_Builder.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\Lab2_Builder\obj\Debug\net8.0\Lab2_Builder.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\Lab2_Builder\obj\Debug\net8.0\Lab2_Builder.AssemblyInfo.cs
+C:\Users\Admin\Desktop\Lab2_Builder\obj\Debug\net8.0\Lab2_Builder.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Lab2_Builder\obj\Debug\net8.0\Lab2_Builder.dll
+C:\Users\Admin\Desktop\Lab2_Builder\obj\Debug\net8.0\refint\Lab2_Builder.dll
+C:\Users\Admin\Desktop\Lab2_Builder\obj\Debug\net8.0\Lab2_Builder.pdb
+C:\Users\Admin\Desktop\Lab2_Builder\obj\Debug\net8.0\Lab2_Builder.genruntimeconfig.cache
+C:\Users\Admin\Desktop\Lab2_Builder\obj\Debug\net8.0\ref\Lab2_Builder.dll
+C:\Users\Admin\Desktop\Lab2_Builder\obj\Debug\net8.0\Lab2_Bui.9782185D.Up2Date

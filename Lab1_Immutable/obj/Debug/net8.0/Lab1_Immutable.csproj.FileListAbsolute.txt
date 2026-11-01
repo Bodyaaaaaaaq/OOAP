@@ -1,0 +1,30 @@
+C:\Users\Admin\Desktop\Lab1_Immutable\bin\Debug\net8.0\Lab1_Immutable.exe
+C:\Users\Admin\Desktop\Lab1_Immutable\bin\Debug\net8.0\Lab1_Immutable.deps.json
+C:\Users\Admin\Desktop\Lab1_Immutable\bin\Debug\net8.0\Lab1_Immutable.runtimeconfig.json
+C:\Users\Admin\Desktop\Lab1_Immutable\bin\Debug\net8.0\Lab1_Immutable.dll
+C:\Users\Admin\Desktop\Lab1_Immutable\bin\Debug\net8.0\Lab1_Immutable.pdb
+C:\Users\Admin\Desktop\Lab1_Immutable\obj\Debug\net8.0\Lab1_Immutable.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\Lab1_Immutable\obj\Debug\net8.0\Lab1_Immutable.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\Lab1_Immutable\obj\Debug\net8.0\Lab1_Immutable.AssemblyInfo.cs
+C:\Users\Admin\Desktop\Lab1_Immutable\obj\Debug\net8.0\Lab1_Immutable.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Lab1_Immutable\obj\Debug\net8.0\Lab1_Immutable.dll
+C:\Users\Admin\Desktop\Lab1_Immutable\obj\Debug\net8.0\refint\Lab1_Immutable.dll
+C:\Users\Admin\Desktop\Lab1_Immutable\obj\Debug\net8.0\Lab1_Immutable.pdb
+C:\Users\Admin\Desktop\Lab1_Immutable\obj\Debug\net8.0\Lab1_Immutable.genruntimeconfig.cache
+C:\Users\Admin\Desktop\Lab1_Immutable\obj\Debug\net8.0\ref\Lab1_Immutable.dll
+C:\Users\Admin\Desktop\Lab1_Immutable\obj\Debug\net8.0\Lab1_Imm.2DCE573D.Up2Date
+C:\Users\Admin\Desktop\Bohdan\Лісатєх\3 КУРС 1 СЕМЕСТР\ООАП\Lab1_Immutable\bin\Debug\net8.0\Lab1_Immutable.exe
+C:\Users\Admin\Desktop\Bohdan\Лісатєх\3 КУРС 1 СЕМЕСТР\ООАП\Lab1_Immutable\bin\Debug\net8.0\Lab1_Immutable.deps.json
+C:\Users\Admin\Desktop\Bohdan\Лісатєх\3 КУРС 1 СЕМЕСТР\ООАП\Lab1_Immutable\bin\Debug\net8.0\Lab1_Immutable.runtimeconfig.json
+C:\Users\Admin\Desktop\Bohdan\Лісатєх\3 КУРС 1 СЕМЕСТР\ООАП\Lab1_Immutable\bin\Debug\net8.0\Lab1_Immutable.dll
+C:\Users\Admin\Desktop\Bohdan\Лісатєх\3 КУРС 1 СЕМЕСТР\ООАП\Lab1_Immutable\bin\Debug\net8.0\Lab1_Immutable.pdb
+C:\Users\Admin\Desktop\Bohdan\Лісатєх\3 КУРС 1 СЕМЕСТР\ООАП\Lab1_Immutable\obj\Debug\net8.0\Lab1_Immutable.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\Bohdan\Лісатєх\3 КУРС 1 СЕМЕСТР\ООАП\Lab1_Immutable\obj\Debug\net8.0\Lab1_Immutable.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\Bohdan\Лісатєх\3 КУРС 1 СЕМЕСТР\ООАП\Lab1_Immutable\obj\Debug\net8.0\Lab1_Immutable.AssemblyInfo.cs
+C:\Users\Admin\Desktop\Bohdan\Лісатєх\3 КУРС 1 СЕМЕСТР\ООАП\Lab1_Immutable\obj\Debug\net8.0\Lab1_Immutable.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Bohdan\Лісатєх\3 КУРС 1 СЕМЕСТР\ООАП\Lab1_Immutable\obj\Debug\net8.0\Lab1_Immutable.dll
+C:\Users\Admin\Desktop\Bohdan\Лісатєх\3 КУРС 1 СЕМЕСТР\ООАП\Lab1_Immutable\obj\Debug\net8.0\refint\Lab1_Immutable.dll
+C:\Users\Admin\Desktop\Bohdan\Лісатєх\3 КУРС 1 СЕМЕСТР\ООАП\Lab1_Immutable\obj\Debug\net8.0\Lab1_Immutable.pdb
+C:\Users\Admin\Desktop\Bohdan\Лісатєх\3 КУРС 1 СЕМЕСТР\ООАП\Lab1_Immutable\obj\Debug\net8.0\Lab1_Immutable.genruntimeconfig.cache
+C:\Users\Admin\Desktop\Bohdan\Лісатєх\3 КУРС 1 СЕМЕСТР\ООАП\Lab1_Immutable\obj\Debug\net8.0\ref\Lab1_Immutable.dll
+C:\Users\Admin\Desktop\Bohdan\Лісатєх\3 КУРС 1 СЕМЕСТР\ООАП\Lab1_Immutable\obj\Debug\net8.0\Lab1_Imm.2DCE573D.Up2Date
