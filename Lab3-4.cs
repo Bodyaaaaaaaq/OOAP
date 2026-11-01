@@ -8,17 +8,11 @@ using System.Threading.Tasks;
 
 namespace Lab3_4_Singleton_Bridge
 {
-    // =====================================================================
-    //  ЛАБ. 3 — SINGLETON з РАННЬОЮ ІНІЦІАЛІЗАЦІЄЮ (варіант 4)
-    //  Лічильник проданих товарів трьох груп
-    // =====================================================================
 
     public enum ProductGroup { Food, Medicine, Clothing }
 
     public sealed class SalesCounter
     {
-        // РАННЯ ІНІЦІАЛІЗАЦІЯ: єдиний екземпляр створюється одразу
-        // (під час завантаження типу), а не при першому зверненні до Instance().
         private static readonly SalesCounter _instance = new SalesCounter();
 
         private const string LogFile = "sales_log.txt";
@@ -30,7 +24,6 @@ namespace Lab3_4_Singleton_Bridge
         public int TotalCount { get; private set; }
         public decimal TotalCost { get; private set; }
 
-        // Закритий конструктор — ззовні створити об'єкт неможливо
         private SalesCounter()
         {
             foreach (ProductGroup g in Enum.GetValues(typeof(ProductGroup)))
@@ -46,7 +39,6 @@ namespace Lab3_4_Singleton_Bridge
             _ => "Одяг"
         };
 
-        // Надбавка: 5% на продукти, 10% на ліки, 15% на одяг
         public static decimal Markup(ProductGroup group) => group switch
         {
             ProductGroup.Food => 0.05m,
@@ -54,10 +46,9 @@ namespace Lab3_4_Singleton_Bridge
             _ => 0.15m
         };
 
-        /// <summary>Продаж одного товару: випадкова ціна + надбавка, оновлення лічильників, запис у файл.</summary>
         public (decimal basePrice, decimal finalPrice) Sell(ProductGroup group)
         {
-            lock (_lock)   // щоб лічильник і файл були коректними при багатопотоковому доступі
+            lock (_lock)  
             {
                 decimal basePrice = Math.Round((decimal)(_random.NextDouble() * 990 + 10), 2);
                 decimal finalPrice = Math.Round(basePrice * (1 + Markup(group)), 2);
@@ -82,27 +73,20 @@ namespace Lab3_4_Singleton_Bridge
         public string[] ReadLog() => File.Exists(LogFile) ? File.ReadAllLines(LogFile, Encoding.UTF8) : Array.Empty<string>();
     }
 
-    // =====================================================================
-    //  ЛАБ. 4 — BRIDGE (варіант 4): бухгалтерія
-    //  Заробітна плата: за відпрацьовані години або відрядна
-    // =====================================================================
 
-    /// <summary>Ставки працівника: за годину та за одиницю виконаної роботи.</summary>
     public sealed record PayRates(decimal PerHour, decimal PerUnit);
 
-    // ---------- Implementor (реалізація) ----------
     public interface IPaymentMethod
     {
         string Title { get; }
-        string WorkUnit { get; }   // у чому вимірюється обсяг роботи
+        string WorkUnit { get; }  
         decimal Calculate(PayRates rates, decimal workAmount);
     }
 
-    // ---------- Concrete Implementors ----------
     public class HourlyPayment : IPaymentMethod
     {
-        private const decimal NormHours = 160m;       // місячна норма
-        private const decimal OvertimeFactor = 1.5m;  // понаднормові оплачуються в 1,5 раза
+        private const decimal NormHours = 160m;     
+        private const decimal OvertimeFactor = 1.5m; 
 
         public string Title => "Погодинна (за відпрацьовані години)";
         public string WorkUnit => "годин";
@@ -123,14 +107,13 @@ namespace Lab3_4_Singleton_Bridge
         public decimal Calculate(PayRates rates, decimal units) => Math.Round(units * rates.PerUnit, 2);
     }
 
-    // ---------- Abstraction (абстракція) ----------
     public abstract class Employee
     {
         public string Name { get; }
         public string Position { get; }
         public PayRates Rates { get; }
 
-        // «Міст» до ієрархії способів оплати
+
         public IPaymentMethod PaymentMethod { get; private set; }
 
         protected Employee(string name, string position, PayRates rates, IPaymentMethod paymentMethod)
@@ -141,17 +124,13 @@ namespace Lab3_4_Singleton_Bridge
             PaymentMethod = paymentMethod;
         }
 
-        // Спосіб оплати можна змінити під час роботи програми
         public void SetPaymentMethod(IPaymentMethod method) => PaymentMethod = method;
 
-        // Операція абстракції делегує розрахунок реалізації
         public decimal CalculateSalary(decimal workAmount) => PaymentMethod.Calculate(Rates, workAmount);
 
-        // Характеристики, специфічні для професії
         public abstract string GetInfo();
     }
 
-    // ---------- Refined Abstractions (професії) ----------
     public class Programmer : Employee
     {
         public string Language { get; }
@@ -192,9 +171,6 @@ namespace Lab3_4_Singleton_Bridge
         public override string GetInfo() => $"розряд: {Grade}";
     }
 
-    // =====================================================================
-    //  Консольний інтерфейс
-    // =====================================================================
 
     internal static class Program
     {
@@ -228,9 +204,6 @@ namespace Lab3_4_Singleton_Bridge
             }
         }
 
-        // ------------------------------------------------------------------
-        //  Допоміжні методи введення
-        // ------------------------------------------------------------------
 
         private static int ReadInt(string prompt, int min, int max)
         {
@@ -256,9 +229,6 @@ namespace Lab3_4_Singleton_Bridge
             }
         }
 
-        // ------------------------------------------------------------------
-        //  Лаб. 3 — Singleton
-        // ------------------------------------------------------------------
 
         private static void SalesMenu()
         {
@@ -306,7 +276,6 @@ namespace Lab3_4_Singleton_Bridge
 
             Parallel.For(0, 30, i =>
             {
-                // кожен потік звертається до того самого єдиного об'єкта
                 SalesCounter.Instance().Sell(groups[i % groups.Length]);
             });
 
@@ -345,9 +314,6 @@ namespace Lab3_4_Singleton_Bridge
             Console.WriteLine($"ReferenceEquals(instance1, instance2) = {ReferenceEquals(a, b)}");
         }
 
-        // ------------------------------------------------------------------
-        //  Лаб. 4 — Bridge
-        // ------------------------------------------------------------------
 
         private static void SeedEmployees()
         {
@@ -413,7 +379,7 @@ namespace Lab3_4_Singleton_Bridge
 
         private static void CompareMethods()
         {
-            const decimal hours = 168m;   // 160 норма + 8 понаднормових
+            const decimal hours = 168m;
             const decimal units = 40m;
 
             Console.WriteLine();
@@ -430,7 +396,7 @@ namespace Lab3_4_Singleton_Bridge
                 e.SetPaymentMethod(Piecework);
                 decimal byUnits = e.CalculateSalary(units);
 
-                e.SetPaymentMethod(original);   // повертаємо початковий спосіб
+                e.SetPaymentMethod(original);  
 
                 Console.WriteLine($"{e.Name,-20}{e.Position,-12}{byHours,14:N2}{byUnits,14:N2}");
             }
